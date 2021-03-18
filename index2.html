@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graduate_project</title>
+</head>
+<body>
+    <select name="subject_class" id="box_1" >
+        <option value="전공">전공</option>
+        <option value="교양">교양</option>
+        <option value="일반선택">일반선택</option>
+    </select>
+    <input type="text" name="a2" id="a2" placeholder="과목명을 입력하시오.. ">
+    <input type="number" name="a3"  id="a3" placeholder="3(학점)" min="1" max="10">
+    <select name="subject_score" id="box_2">
+        <option value="4.5">A+</option>
+        <option value="4.0">A0</option>
+        <option value="3.5">B+</option>
+        <option value="3.0">B0</option>
+        <option value="2.5">C+</option>
+        <option value="2.0">C0</option>
+        <option value="1.5">D+</option>
+        <option value="1.0">D0</option>
+        <option value="0">F</option>
+    </select>
+    <select name="subject_season_number" id="box_3">
+        <option value="1학년">1학년</option>
+        <option value="2학년">2학년</option>
+        <option value="3학년">3학년</option>
+        <option value="4학년">4학년</option>
+        <option value="4학년 이상">4학년 이상</option>
+    </select>
+    <select name="subject_season" id="box_4">
+        <option value="1학기">1학기</option>
+        <option value="2학기">2학기</option>
+        <option value="여름학기">여름학기</option>
+        <option value="겨울학기">겨울학기</option>
+    </select>
+
+
+
+    <button id='submit_btn' onclick= "Add();" >Submit</button>
+    <div>
+        <table border='1' width="585" style="table-layout:fixed;" id="major_table">
+            <th width="80">전공</th>
+            <th width="300">과목명</th>
+            <th width="100">학점</th>
+            <th width="100">성적</th>
+            <th width="50">학년</th>
+            <th width="50">학기</th>
+        </table>
+        <div>이수학점 합계:<span id="majorsum_num"></span></div>
+        <div>성적 산출: <span id="majorsum_score"></span></div>
+        
+        <table border='1' width="585" style="table-layout:fixed;" id="notmajor_table">
+            <th width="80">교양</th>
+            <th width="300">과목명</th>
+            <th width="100">학점</th>
+            <th width="100">성적</th>
+            <th width="50">학년</th>
+            <th width="50">학기</th>
+        </table>
+        <div>이수학점 합계:<span id="notmajorsum_num"></span></div>
+        <div>성적 산출:<span id="notmajorsum_score"></span></div>
+
+        <table border='1' width="585" style="table-layout:fixed;" id="general_table">
+            <th width="80">일반선택</th>
+            <th width="300">과목명</th>
+            <th width="100">학점</th>
+            <th width="100">성적</th>
+            <th width="50">학년</th>
+            <th width="50">학기</th>
+        </table>
+        <div>이수학점 합계:<span id="generalsum_num"></span></div>
+        <div>성적 산출:<span id="generalsum_score"></span></div>
+    </div>
+    <div>
+        <div>총 이수학점 합계: <span id="sum_num"></span></div>
+        <div>총 성적 산출: <span id="sum_score"></span></div>
+    </div>
+    
+
+    <script src="main2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

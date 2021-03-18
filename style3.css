@@ -1,0 +1,8 @@
+table{
+    align-items: center;
+    justify-content: center;
+}
+.select_box{
+    border: 1;
+    border-color: black;
+}
